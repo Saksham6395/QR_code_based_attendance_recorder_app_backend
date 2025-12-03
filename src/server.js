@@ -1,5 +1,3 @@
-// src/server.js
-require('dotenv').config();
 const app = require('./app');
 const { pool } = require('./config/db');
 
@@ -7,7 +5,7 @@ const PORT = process.env.PORT || 4000;
 
 (async () => {
   try {
-    await pool.query('SELECT 1'); // test DB connection
+    await pool.query('SELECT 1'); // test DB
     console.log('✅ Database reachable');
 
     app.listen(PORT, () => {
